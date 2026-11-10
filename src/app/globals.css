@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #f8f1e8;
+  --ink: #211d1a;
+  --sage: #7f8d73;
+  --terracotta: #b86445;
+  --rose: #ead1c9;
+  --line: rgba(33, 29, 26, .12);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+button, input, textarea, select { font: inherit; }
+.font-display { font-family: Georgia, "Times New Roman", serif; }
+.container-mb { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+.noise { position: relative; }
+.noise::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .035; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E"); }
+.card-shadow { box-shadow: 0 18px 55px rgba(48, 36, 27, .09); }
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { scrollbar-width: none; }
